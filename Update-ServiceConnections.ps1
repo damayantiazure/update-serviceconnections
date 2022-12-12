@@ -88,7 +88,7 @@ function Start-ProcessServiceConnection {
             }
             else {
                 # Remove all previous secrets for the service connection SPN
-                # Remove-ExistingSecrets -keys $existingKeys -sc $sc
+                Remove-ExistingSecrets -keys $existingKeys -sc $sc
                 Write-Host "Finished processing `"$($sc.name)`".`n"
             }
         }
