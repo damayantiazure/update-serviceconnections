@@ -27,6 +27,7 @@ Param(
     [Parameter(Mandatory=$false,
     HelpMessage="Please enter the name of the service connection for this script to target.")]
     $scTarget,
+    [Parameter(Mandatory=$false,
     HelpMessage="Please enter the PAT")]
     $accessToken
 )
