@@ -15,12 +15,12 @@ steps:
 
   - task: AzureCLI@2
     inputs:
-      azureSubscription: 'Renewal SPN'
+      azureSubscription: 'AZ-Service-connection'
       scriptType: 'pscore'
       scriptLocation: 'scriptPath'
       scriptPath: '$(System.DefaultWorkingDirectory)/Update-ServiceConnections.ps1'
       # arguments: '-org "iveylabs" -project "DemoProject" -scRunning "Renewal SPN" -scTarget "SPN 2"'
-      arguments: '-org "puneetminhas" -project "ServiceConnectionRenewal" -scRunning "Renewal SPN"' # Just give the name of the service connection you've used in the azureSubscription input.
+      arguments: '-org "workshopsdev" -project "Devops-demos" -scRunning "AZ-Service-connection"' # Just give the name of the service connection you've used in the azureSubscription input.
       addSpnToEnvironment: true
     env:
       SYSTEM_ACCESSTOKEN: $(System.AccessToken)
