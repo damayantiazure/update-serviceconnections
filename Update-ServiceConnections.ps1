@@ -26,7 +26,9 @@ Param(
     $scRunning,
     [Parameter(Mandatory=$false,
     HelpMessage="Please enter the name of the service connection for this script to target.")]
-    $scTarget
+    $scTarget,
+    HelpMessage="Please enter the PAT")]
+    $accessToken
 )
 $ErrorActionPreference = 'Stop'
 
@@ -102,7 +104,7 @@ function Start-ProcessServiceConnection {
 }
 # Set up variables
 #$pat = $env:SYSTEM_ACCESSTOKEN
-$pat = $(System.AccessToken)
+$pat = $accessToken
 
 # Convert personal access token to a base64 string
 $token = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes(":$($pat)"))
