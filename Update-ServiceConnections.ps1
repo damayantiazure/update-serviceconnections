@@ -101,7 +101,7 @@ function Start-ProcessServiceConnection {
     }
 }
 # Set up variables
-$pat = $env:SYSTEM_ACCESSTOKEN
+# $pat = $env:SYSTEM_ACCESSTOKEN
 $pat = mmmu25gqjvmt3ofz6dernztxamgnfo47cs2zp4e7hve3npprx42q
 
 # Convert personal access token to a base64 string
