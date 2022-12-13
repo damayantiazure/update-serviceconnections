@@ -47,14 +47,14 @@ Function Confirm-TargetServiceConnection {
     else { return $true }
 
     # If the SC name contains ServiceNow, skip
-    if($sc.name -like "*ServiceNow*") {
+    if($sc.name -like "*test*") {
         Write-Host "$($sc.name) is a Service Now connection. Skipping."
         return $false
     }
     else { return $true }
 
     # If the SC name contains DCX, skip
-    if($sc.name -like "*snow*") {
+    if($sc.name -like "*test123*") {
         Write-Host "$($sc.name) is a Service Now connection. Skipping."
         return $false
     }
@@ -103,7 +103,7 @@ function Start-ProcessServiceConnection {
 }
 # Set up variables
 #$pat = $env:SYSTEM_ACCESSTOKEN
-$pat = "mmmu25gqjvmt3ofz6dernztxamgnfo47cs2zp4e7hve3npprx42q"
+$pat = ""
 
 # Convert personal access token to a base64 string
 $token = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes(":$($pat)"))
